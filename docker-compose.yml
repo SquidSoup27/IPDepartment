@@ -2,22 +2,19 @@ version: '3.4'
 
 services:
   api:
-    image: jepstein95/ip-department:api
-    #image: ${DOCKER_REGISTRY-}api
+    image: ${DOCKER_REGISTRY-}api
     build:
       context: .
       dockerfile: API/Dockerfile
 
   pingservice:
-    image: jepstein95/ip-department:pingservice
-    #image: ${DOCKER_REGISTRY-}pingservice
+    image: ${DOCKER_REGISTRY-}pingservice
     build:
       context: .
       dockerfile: PingService/Dockerfile
 
   dnsservice:
-    image: jepstein95/ip-department:dnsservice
-    #image: ${DOCKER_REGISTRY-}dnsservice
+    image: ${DOCKER_REGISTRY-}dnsservice
     build:
       context: .
       dockerfile: DNSService/Dockerfile
